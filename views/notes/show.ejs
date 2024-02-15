@@ -1,0 +1,13 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/header') -%>
+<h2 class="text-center my-4"><%= title %></h2>
+<div class="card mx-auto py-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><strong>ID:</strong><%= note.id %></h5>
+    <p class="card-text"><%= note.note %></p>
+    <h6 class="card-subtitle mb-2 text-muted">Complete: <%= note.done ? 'Yes' : 'No' %></h6>
+    <a href="/notes" class="card-link">Go Back</a>
+    <a href="/" class="card-link">Home</a>
+  </div>
+</div>
+<%- include('../partials/footer') -%>

@@ -1,0 +1,47 @@
+<%- include('../partials/head') -%> 
+<%- include('../partials/header') -%>
+
+<h1><%= title %></h1>
+
+ <table class="table text-center py-2 w-75">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Note</th>
+      <th scope="col">Complete</th>
+    </tr>
+  </thead>
+  <% notes.forEach(function(n) { %>
+  <tbody>
+    <tr>
+      <th scope="row"><%=n.id%></th>
+      <td> 
+         <a href="/notes/<%= n.id %>">
+                <%= n.note %>
+            </a></td>
+      <td><%= n.done ? 'done' : 'not done' %></td>
+    </tr>
+    <tr>
+
+  </tbody>
+   <% }); %>
+</table>
+
+
+
+
+
+
+
+<!-- <ul>
+  <% notes.forEach(n => { %>
+    <a href="/notes/<%=n.id%>">
+ <li><%= n.id %></li>
+    </a>
+  <li><%= n.note %></li>
+  <li><%= n.done %></li>
+
+  <% })%>
+</ul> -->
+
+<%- include('../partials/footer') -%>
